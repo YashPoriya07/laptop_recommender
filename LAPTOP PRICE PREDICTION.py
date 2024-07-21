@@ -630,7 +630,7 @@ from xgboost import XGBRegressor
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = LinearRegression()
@@ -655,7 +655,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = Lasso(alpha=0.001)
@@ -680,7 +680,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = KNeighborsRegressor(n_neighbors=3)
@@ -704,7 +704,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = DecisionTreeRegressor(max_depth=8)
@@ -728,7 +728,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = SVR(kernel='rbf',C=10000,epsilon=0.1)
@@ -752,7 +752,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = ExtraTreesRegressor(n_estimators=100,
@@ -779,7 +779,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = AdaBoostRegressor(n_estimators=15,learning_rate=1.0)
@@ -803,7 +803,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = GradientBoostingRegressor(n_estimators=500)
@@ -827,7 +827,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf', OneHotEncoder(sparse=False, drop='first'), [0, 1, 7, 10, 11])
+    ('col_tnf', OneHotEncoder(sparse_output=False, drop='first'), [0, 1, 7, 10, 11])
 ], remainder='passthrough')
 
 step2 = XGBRegressor(n_estimators=45,max_depth=5,learning_rate=0.5)
@@ -853,7 +853,7 @@ print('M.A.E',mean_absolute_error(y_test,y_pred))
 from sklearn.ensemble import VotingRegressor,StackingRegressor
 
 step1 = ColumnTransformer(transformers=[
-    ('col_tnf',OneHotEncoder(sparse=False,drop='first'),[0,1,7,10,11])
+    ('col_tnf',OneHotEncoder(sparse_output=False,drop='first'),[0,1,7,10,11])
 ],remainder='passthrough')
 
 
